@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="common/header_fragment">
+	</head>
+	
+	<body>
+		<div th:replace="common/header"></div>
+			<div class="container">
+			    <div class="row">
+			        <div class="col-3">
+			        	<div class="blockquote text-center" >
+			        		</br>
+				        </div>
+			        	<div class="text-primary">
+							<div class="align-bottom">
+								<div class="font-weight-bold">
+					        		<h1 class="text-center" th:text="${logoTitle}">タイトル</h1>
+								</div>
+				        	</div>
+			        	</div>
+			        	<div>
+			        		<img th:src="${logoUrl}" src="logo/logo0.png" class="img-fluid" style="height: 20%;width: 60%">
+			        	</div>
+			        	<div class="blockquote text-center" >
+				        	<p th:text="${catchcopy}">サンプル</p>
+				        </div>
+			        	<div class="blockquote text-center" >
+			        		</br>
+				        </div>
+			        	<div class="text-center" >
+				        	<p th:text="${loginUserName}">サンプル</p>
+				        </div>
+			        </div>
+			        <div class="col-md-9">
+							<form action="/create_report" method="POST" class="form-group">
+								<h6>
+									<span class="align-center">
+									    <tr>
+											<p>提出年月日：2020年7月3日</p>
+										</tr>
+										<tr>
+											<label>所感<textarea class="form-control" autocomplete="off"  name="note" rows="10"></textarea></label>
+									    </tr>
+									    <tr>
+											<input type="submit" class="btn btn-primary btn-lg" value="提出">
+										</tr>
+									</span>
+								</h6>
+							</form>
+						<div class="m-md-3">
+							<a class="btn btn-primary btn-lg" href="login" role="button">ログアウト</a>
+						</div>
+			        </div>
+			    </div>
+			</div>
+		<div th:replace="common/footer"></div>
+	</body>
+</html>

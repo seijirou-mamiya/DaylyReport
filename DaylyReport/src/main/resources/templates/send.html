@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head th:replace="common/header_fragment">
+	</head>
+	
+	<body>
+		<div th:replace="common/header"></div>
+		<h3>
+			<div class="container">
+			    <div class="row">
+			        <div class="col-6">
+			        	<tr>
+				        	<div class="blockquote text-center" >
+				        		<span>提出しました！</span>
+							</div>
+							<div class="m-md-3">
+								<a class="btn btn-primary btn-lg" href="login" role="button">ログアウト</a>
+							</div>
+						</tr>
+			        	<div class="blockquote text-center" >
+			        		</br>
+				        </div>
+			        	<div class="text-center" >
+				        	<h6 th:text="${loginUserName}">サンプル</h6>
+				        </div>
+					</div>
+		        	<div class="blockquote text-center" >
+		        		</br>
+			        </div>
+				</div>
+			</div>
+			<div class="text-danger">
+				<span class="text-danger" th:text="${message}"></span>
+			</div>
+			</br>
+		</h3>
+		</br>
+		</br>
+		</br>
+		<div th:replace="common/footer"></div>
+	</body>
+</html>

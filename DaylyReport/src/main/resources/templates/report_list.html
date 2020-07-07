@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="common/header_fragment">
+	</head>
+	
+	<body>
+		<div th:replace="common/header"></div>
+			<div class="container">
+			    <div class="row">
+			        <div class="col-3">
+			        	<div class="blockquote text-center" >
+			        		</br>
+				        </div>
+			        	<div class="text-primary">
+							<div class="align-bottom">
+								<div class="font-weight-bold">
+					        		<h1 class="text-center" th:text="${logoTitle}">タイトル</h1>
+								</div>
+				        	</div>
+			        	</div>
+			        	<div class="py-2">
+			        		<img th:src="${logoUrl}" src="logo/logo0.png" class="img-fluid" style="height: 50%;width: 100%">
+			        	</div>
+			        	<div class="blockquote text-center" >
+				        	<p th:text="${catchcopy}">サンプル</p>
+				        </div>
+			        	<div class="blockquote text-center" >
+			        		</br>
+				        </div>
+			        	<div class="text-center" >
+				        	<p th:text="${loginUserName}">サンプル</p>
+				        </div>
+			        </div>
+			        <div class="col-md-9">
+						<table class="table table-striped">
+							<h4>
+							提出済み日報一覧
+							<thead>
+								<tr>
+									<th style="width:30px">No</th>
+									<th style="width:160px">投稿者</th>
+									<th style="width:100px">投稿日</th>
+									<th>内容</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="report : ${reportList}">
+									<th th:text=${report.id}>id</td>
+									<td th:text=${report.name}>みやけ</td>
+									<td th:text=${report.date}>2020-07-03</td>
+									<td th:text=${report.note}>明日から結合試験だ。大変だと思った。</td>
+								</tr>
+							</tbody>
+							</h3>
+						</table>
+						<div class="m-md-3">
+							<a class="btn btn-primary btn-lg" href="login" role="button">ログアウト</a>
+						</div>
+			        </div>
+			    </div>
+			</div>
+		<div th:replace="common/footer"></div>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="common/header_fragment">
+	</head>
+	
+	<body>
+		<div th:replace="common/header"></div>
+		<div class="m-md-3">
+			<h3>
+				配送先の地域を選択してください。
+			</h3>
+			<form action="/areaSelect" method="POST">
+				<h3>
+					<span class="align-middle">
+					    <select id="areaName" name="areaName">
+					        <option th:each="area : ${areaList}" th:value="${area.name}" th:selected="${area.id == id}" th:inline="text">[[${area.name}]]</option>
+					    </select>
+						<input type="submit" class="btn btn-primary btn-lg"/>
+					</span>
+				</h3>
+			</form>
+		</div>
+		<div class="m-md-3">
+			<table class="table table-striped">
+				<h4>
+				料金表
+				<thead>
+					<tr>
+						<th style="width:60px">No</th>
+						<th style="width:100px">地域</th>
+						<th style="width:100px">料金</th>
+						<th>備考</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="area : ${areaList}">
+						<th th:text=${area.id}>id</td>
+						<td th:text=${area.name}>エリア</td>
+						<td th:text=${area.rate}>料金</td>
+						<td th:text=${area.note}>備考</td>
+					</tr>
+				</tbody>
+				</h3>
+			</table>
+		</div>
+		<div th:replace="common/footer"></div>
+	</body>
+</html>

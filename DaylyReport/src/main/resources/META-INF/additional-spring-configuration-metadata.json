@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "users.id",
+    "type": "java.lang.String",
+    "description": "A description for 'users.id'"
+  },
+  {
+    "name": "users.id",
+    "type": "java.lang.String",
+    "description": "A description for 'users.id'"
+  },
+  {
+    "name": "users.name",
+    "type": "java.lang.String",
+    "description": "A description for 'users.name'"
+  },
+  {
+    "name": "catch_copy",
+    "type": "java.lang.String",
+    "description": "A description for 'catch_copy'"
+  }
+]}

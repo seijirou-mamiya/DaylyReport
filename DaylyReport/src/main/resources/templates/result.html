@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head th:replace="common/header_fragment">
+	</head>
+	
+	<body>
+	<div th:replace="common/header"></div>
+	<h3>
+		<div class="m-md-3">
+			<span th:text="${message}">Hello world</span>
+		</div>
+		</br>
+		<div class="m-md-3">
+			<a class="btn btn-primary btn-lg" href="areaSelect" role="button">戻る</a>
+		</div>
+	</h3>
+	</br>
+	</br>
+	</br>
+	<div th:replace="common/footer"></div>
+	</body>
+</html>
